@@ -1,0 +1,169 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    overflow-x:hidden ;
+}
+body{
+    position: relative;
+    overflow-x: hidden;
+}
+.theme{
+    background-color: #005ce3d9;
+}
+
+.chatContainer{
+     height: 100vh;
+     flex-direction: column;
+     position: relative;
+}
+
+.navbar{
+    height: 10vh;
+}
+.message{
+    width: 60%;
+}
+.message>div{
+    max-width: 65%;
+}
+.username{
+    font-size: 10px;
+    font-weight: bold;
+}
+.chats{
+    overflow-y: auto;
+    height: 80vh;
+}
+.form{
+    display: flex;
+    position: sticky;
+    bottom: 0;
+    height: 10vh;
+}
+.form>*{
+    outline: none;
+}
+.form>input{
+    width: 100%;
+    border-radius: 30px 0 0 30px;
+}
+.form>button{
+    border-radius: 0 30px 30px 0;
+    color: white;
+}
+.roomh2{
+    animation: hang 4s infinite;
+}
+
+@keyframes hang {
+    0%{
+        transform: skew(20deg);
+    }50%{
+        transform: skew(-20deg);
+    }100%{
+        transform: skew(20deg);
+    }
+}
+
+.profile{
+    width: 5vh;
+    height: 5vh;
+}
+.peoples{
+    overflow-y: auto;
+}
+.title-word {
+    animation: color-animation 4s linear infinite;
+  }
+  
+  .title-word-1 {
+    --color-1: #ff2a00;
+    --color-2: #4461ff;
+    --color-3: #ff00ad;
+  }
+  
+  .title-word-2 {
+    --color-1: #ff00ad;
+    --color-2: #ff2a00;
+    --color-3: #4461ff;
+    /* --color-1: #00c7ff;
+    --color-2: #9afff3;
+    --color-3: #ffffff; */
+  }
+  
+  /* .title-word-3 {
+    --color-1: #ACCFCB;
+    --color-2: #E4A9A8;
+    --color-3: #ACCFCB;
+  } */
+  
+  .title-word-4 {
+    --color-1: #4461ff;
+    --color-2: #ff00ad;
+    --color-3: #ff2a00;
+    /* --color-1: #4461ff;
+    --color-2: #ff7b33;
+    --color-3: #ff413e; */
+  }
+  
+  @keyframes color-animation {
+    0%    {color: var(--color-1)}
+    32%   {color: var(--color-1)}
+    33%   {color: var(--color-2)}
+    65%   {color: var(--color-2)}
+    66%   {color: var(--color-3)}
+    99%   {color: var(--color-3)}
+    100%  {color: var(--color-1)}
+  }
+  
+  /* Here are just some visual styles. 🖌 */
+  
+  .title {
+    text-align:center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+
+  .profileImg{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+
+  .headerImg{
+    height: 100%;
+    border-radius: 50%;
+  }
+  .HamburgerMenu{
+    display: none;
+  }
+  .mobile-menu{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    top: 10vh;
+    background-color: white;
+    padding: 1px 0;
+  }
+
+  .mobile-menu>button{
+    margin-top: 1px;
+    width: 40vw;
+  }
+  @media only screen and (max-width: 600px) {
+    .welcome{
+        font-size: 1.25rem !important    ;
+    }
+
+    .HamburgerMenu{
+        display: block;
+    }
+    .right{
+        display: none !important;
+    }
+  }
